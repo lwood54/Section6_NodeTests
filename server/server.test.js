@@ -19,6 +19,16 @@ describe('Server', () => {
         });
     });
 
+    describe('GET /about route', () => {
+        it('should return the about page message', (done) => {
+            request(app)
+                .get('/about')
+                .expect(200)
+                .expect('About Page Coming Soon.')
+                .end(done);
+        });
+    });
+
     describe('get /users route', () => {
         it('should return a user Logan Wood, age 35', (done) => {
             request(app)

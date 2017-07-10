@@ -18,6 +18,10 @@ app.get('/users', (req, res) => {
         {name: 'Logan', age: 35}, {name: 'Tiffany', age: 35}, {name: 'Amrynn', age: 5}, {name: 'Eisley', age: 5}
     ]);
 });
+
+app.get('/about', (req, res) => {
+    res.send('About Page Coming Soon.');
+});
 // tell node what port to use for the server
 app.listen(3000);
 module.exports.app = app;
